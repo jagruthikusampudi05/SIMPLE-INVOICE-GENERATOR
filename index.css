@@ -1,0 +1,111 @@
+:root{
+    --primary-color: rgb(9, 106, 125);
+    --secondary-color: rgb(44, 137, 137);
+    --text-color: rgb(26, 99, 188);
+   --grand-total-color: rgb(128, 15, 70);
+   --border-color:rgb(97, 74, 74);
+   --panel-background:rgb(212, 195, 195);
+}
+
+
+html, body{
+    margin: 0;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    background:var(--secondary-color);
+    color:var(--text-color);
+}
+
+:focus{
+    outline: none;
+}
+
+section{
+    height: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+section .panel{
+    width: 800px;
+    min-height: 400px;
+    background: var(--panel-background);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+section .panel h1{
+    text-align: center;
+    color: var(--primary-color);
+    border-bottom:  3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+section .panel button{
+    border: none;
+    width: 150px;
+    height: 40px;
+    color:var(--panel-background);
+    border-radius: 4px;
+    background: var(--primary-color);
+    margin: 10px 0;
+    cursor: pointer;
+
+}
+
+section .panel table{
+    border-collapse: collapse;
+    text-align: center;
+}
+section .panel table thead{
+    background: var(--secondary-color);
+    color:var(--primary-color);
+
+}
+section .panel table tr{
+    height: 40px;
+}
+
+section .panel table tr th,
+section .panel table tr td{
+    border: 1px solid var(--border-color);
+}
+section .panel table tbody tr .remove-row{
+    color: var(--grand-total-color);
+    cursor: pointer;
+}
+section .panel table tbody tr td input{
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+section .panel .summary{
+    margin-top: 10px;
+    border-top: 3px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+section .panel .summary .subtotalsummary{
+    width: 300px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+section .panel .summary .subtotalsummary span:last-child{
+    font-weight: bold;
+}
+
+section .panel .summary .grandtotalsummary{
+    color:var(--grand-total-color);
+    border-top: 3px solid var(--primary-color);
+    padding-top: 5px;
+    font-size: 14pt;
+}
